@@ -2,9 +2,9 @@ import React from "react";
 
 //props.images destructured
 const ImageList = ({ images }) => {
-    console.log(images)
-  const imgUrls = images.map((image) => {
-    return <img src={image.urls.regular} alt={image.alt_description} key={image.id}/>;
+  //destruture image properties 
+  const imgUrls = images.map(({id, description, urls}) => {
+    return <img key={id} alt={description} src={urls.regular}  />;
   });
   return <div>{imgUrls}</div>;
 };
