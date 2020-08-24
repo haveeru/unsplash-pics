@@ -19,6 +19,6 @@ function App() {
       <ImageList images={images}/>
     </div>
   );
-}
+} 
 
 export default App;
