@@ -1,11 +1,12 @@
 import React from "react";
 import "./ImageList.css";
+import ImageCard from "./ImageCard";
 
 //props.images destructured
 const ImageList = ({ images }) => {
-  //destruture image properties
-  const imgUrls = images.map(({ id, description, urls }) => {
-    return <img key={id} alt={description} src={urls.regular} />;
+  //destruture image properties id, description, urls
+  const imgUrls = images.map((image) => {
+    return <ImageCard key={image.id} image={image} />;
   });
   return <div className="image-list">{imgUrls}</div>;
 };
